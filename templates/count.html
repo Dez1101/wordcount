@@ -1,0 +1,15 @@
+<h1>COUNT</h1>
+<a href="{% url 'home' %}">START AGAIN</a>
+<h2>TEXT FROM THE HOME PAGE:</h2>
+{{fullText}}
+
+<h2>NUMBER OF WORDS INSIDE THE TEXTAREA</h2>
+{{count}}
+
+<h2>WORD DICTIONARY RETURNING COUNTED</h2>
+<!-- {{sortedWords}} -->
+{% for word, countTotal in sortedWords %}
+{{word}} - {{countTotal}}
+<br>
+
+{% endfor %}
